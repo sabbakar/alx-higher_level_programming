@@ -1,1 +1,0 @@
-Program to assign random number to variable n each time it is executed and it should output "is positive" if the number is greater than zero, "is negative" if the number is less than zero, and "is zero" if the number is 0
