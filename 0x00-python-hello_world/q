@@ -1,4 +1,1 @@
-  File "./100-write.py", line 3
-    sys.stderr.write("and that piece of art is useful - Dora Korpar, 2015-10-19\n"")
-                                                                                   ^
-SyntaxError: EOL while scanning string literal
+and that piece of art is useful - Dora Korpar, 2015-10-19
