@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-def lowercaseAlphabet():
+def lowercaseAlphabets():
     alphabets = ""
     for c in range(97, 123):
         alphabets += chr(c)
     return alphabets
 
 
-print("{}".format(lowercaseAlphabet())
+print("{}".format(
+    lowercaseAlphabets())
+)
