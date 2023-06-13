@@ -5,4 +5,4 @@ def lowercaseAlphabets():
         alphabets += chr(c)
     return alphabets
 
-print(lowercaseAlphabets())
+print("{}".format(lowercaseAlphabets()))
