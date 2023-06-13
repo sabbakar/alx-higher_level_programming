@@ -7,5 +7,5 @@ def lowercaseAlphabets():
 
 
 print("{}".format(
-    lowercaseAlphabets())
-)
+    lowercaseAlphabets()
+), end="")
