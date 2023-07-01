@@ -5,4 +5,3 @@ def islower(c):
         return (True)
     else:
         return (False)
-    print("'' => {}".format("lower" if islower("") else "upper"))
