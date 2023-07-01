@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 def islower(c):
-    if c.islower():
-        return (True)
-    else:
-        return (False)
+    if c == '':
+        raise ValueError("Empty string is not allowed.")
+    return c.islower()
