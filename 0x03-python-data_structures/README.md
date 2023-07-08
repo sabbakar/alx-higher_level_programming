@@ -1,2 +1,1 @@
-0x03-python-data_structures
-The fproject about Data Structures 
+Project about structures, list, and tuples.
