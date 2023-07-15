@@ -3,7 +3,9 @@ def multiple_returns(sentence):
     length = len(sentence)
     first = sentence[0]
     if len(sentence) == 0:
-        return None
+        first = None
+        return first
     else:
-        print("{:d} {}".format(length, first))
         return length, first
+        print("{:d} {}".format(length, first))
+        
