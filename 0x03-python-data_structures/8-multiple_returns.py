@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
-    length = len(sentence)
-    first = sentence[0]
+    my_tuple = ()
     if len(sentence) == 0:
-        first = None
-        return first
+        my_tuple = 0, "None"
     else:
-        return length, first
-        print("{:d} {}".format(length, first))
+        my_tuple = len(sentence), sentence[0]
+    return my_tuple
         
