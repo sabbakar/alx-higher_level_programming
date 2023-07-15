@@ -5,5 +5,5 @@ def multiple_returns(sentence):
     if len(sentence) == 0:
         return None
     else:
-        return length, first
         print("{:d} {}".format(length, first))
+        return length, first
