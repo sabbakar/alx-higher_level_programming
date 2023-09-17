@@ -27,4 +27,4 @@ if __name__ == "__main__":
     states = session.query(State).filter(State.name.contains('a'))
     if states is not None:
         for state in states:
-            print('{0}: {1}'.format(state.id, state.name)
+            print('{0}: {1}'.format(state.id, state.name))
