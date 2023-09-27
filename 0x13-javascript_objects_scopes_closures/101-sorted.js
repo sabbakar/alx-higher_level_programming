@@ -1,5 +1,5 @@
 #!/usr/bin/node
-dict = require('./101-data.js').dict;
+const dict = require('./101-data.js').dict;
 const newDict = {};
 
 Object.getOwnPropertyNames(dict).forEach(occurences => {
