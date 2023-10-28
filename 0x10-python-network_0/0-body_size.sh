@@ -1,8 +1,3 @@
 #!/usr/bin/env bash
-getResponse() {
-	local url="$1"
-
-	local responseSize
-	responseSize=$(curl -s "$url" | awk '/Content-Length/ {print $2}' | tr -d '\r')
-	echo "$responseSize"
-}
+# send a request to an URL with curl, and displays the size of the body of the response
+curl -s "$1" | wc -c
