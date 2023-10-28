@@ -1,3 +1,3 @@
 #!/bin/bash
-response=$(curl -s -o /dev/null -w "%{http_code}" "$1")
-[ "$response" -eq 200 ] && curl -s "$1"
+# send a GET request to an URL with curl, and display the body of the response
+curl -sL "$1"
