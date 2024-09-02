@@ -8,8 +8,8 @@ class Square:
     """
     a class to define a square with a private size attribute.
     """
-    def __init__(self, __size):
+    def __init__(self, size):
         """
         A method that initializes the square instance to accept size
         """
-        return None
+        self.__size = size
