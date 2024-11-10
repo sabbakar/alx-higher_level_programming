@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 A module that has  a function that adds 2 integers.
 """
@@ -16,4 +17,3 @@ def add_integer(a, b=98):
         a = int(a)
         b = int(b)
         return a + b
-
