@@ -34,4 +34,5 @@ b must be an integer
 ...     print(ex.args[0])
 ... 
 cannot convert float infinity to integer
+
 """
