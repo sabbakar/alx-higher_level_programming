@@ -1,3 +1,4 @@
+"""
 A module that has  a function that adds 2 integers.
 for example;
 
@@ -33,3 +34,4 @@ b must be an integer
 ...     print(ex.args[0])
 ... 
 cannot convert float infinity to integer
+"""
