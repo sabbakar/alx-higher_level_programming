@@ -1,19 +1,18 @@
-#!/usr/bin/python3
 """
-File: 0-add_integer.py
-Desc: This module contains defination of a single function.
-Author: Gizachew Bayness (Elec Crazy)
-Date Created: Jul 21 2022
+A module that has  a function that adds 2 integers.
 """
 
 
 def add_integer(a, b=98):
     """
-    This function computes the addition of two integer numbers
+    A function that adds 2 integers.
     """
-    if type(a) not in [float, int]:
-        raise TypeError("a must be an integer")
-    if type(b) not in [float, int]:
-        raise TypeError("b must be an integer")
 
-    return int(a) + int(b)
+    if not isinstance(a, int) and not isinstance(a, float):
+        raise TypeError("a must be an integer")
+    elif not isinstance(b, int) and not isinstance(b, float):
+        raise TypeError("b must be an integer")
+    else:
+        a = int(a)
+        b = int(b)
+        return a + b
