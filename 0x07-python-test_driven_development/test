@@ -1,0 +1,204 @@
+Trying:
+    from importlib import import_module
+Expecting nothing
+ok
+Trying:
+    matrix_divided = import_module('2-matrix_divided').matrix_divided
+Expecting nothing
+ok
+Trying:
+    matrix_divided([[4, 7]], 2)
+Expecting:
+    [[2.0, 3.5]]
+ok
+Trying:
+    matrix_divided([[4, 7]], 0.25)
+Expecting:
+    [[16.0, 28.0]]
+ok
+Trying:
+    matrix_divided([[12, 7], [21, 23]], 13)
+Expecting:
+    [[0.92, 0.54], [1.62, 1.77]]
+ok
+Trying:
+    matrix_divided([[4, 5], [6, 8]], float('inf'))
+Expecting:
+    [[0.0, 0.0], [0.0, 0.0]]
+ok
+Trying:
+    try:
+        matrix_divided([[]], 3)
+    except TypeError as ex:
+        print(ex.args[0])
+Expecting:
+    matrix must be a matrix (list of lists) of integers/floats
+**********************************************************************
+File "./tests/2-matrix_divided.txt", line 17, in 2-matrix_divided.txt
+Failed example:
+    try:
+        matrix_divided([[]], 3)
+    except TypeError as ex:
+        print(ex.args[0])
+Expected:
+    matrix must be a matrix (list of lists) of integers/floats
+Got:
+    [[]]
+Trying:
+    try:
+        matrix_divided([], 3)
+    except TypeError as ex:
+        print(ex.args[0])
+Expecting:
+    matrix must be a matrix (list of lists) of integers/floats
+**********************************************************************
+File "./tests/2-matrix_divided.txt", line 22, in 2-matrix_divided.txt
+Failed example:
+    try:
+        matrix_divided([], 3)
+    except TypeError as ex:
+        print(ex.args[0])
+Exception raised:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.12/doctest.py", line 1361, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 2-matrix_divided.txt[7]>", line 2, in <module>
+        matrix_divided([], 3)
+      File "/home/abubakar/Programming/alx-higher_level_programming/0x07-python-test_driven_development/2-matrix_divided.py", line 19, in matrix_divided
+        row_length = len(matrix[0])
+                         ~~~~~~^^^
+    IndexError: list index out of range
+Trying:
+    try:
+        matrix_divided([(1, 2)], 3)
+    except TypeError as ex:
+        print(ex.args[0])
+Expecting:
+    matrix must be a matrix (list of lists) of integers/floats
+**********************************************************************
+File "./tests/2-matrix_divided.txt", line 27, in 2-matrix_divided.txt
+Failed example:
+    try:
+        matrix_divided([(1, 2)], 3)
+    except TypeError as ex:
+        print(ex.args[0])
+Expected:
+    matrix must be a matrix (list of lists) of integers/floats
+Got:
+    matrix must be a matrix (list of lists) of                 integers/floats
+Trying:
+    try:
+        matrix_divided([7], 3)
+    except TypeError as ex:
+        print(ex.args[0])
+Expecting:
+    matrix must be a matrix (list of lists) of integers/floats
+**********************************************************************
+File "./tests/2-matrix_divided.txt", line 32, in 2-matrix_divided.txt
+Failed example:
+    try:
+        matrix_divided([7], 3)
+    except TypeError as ex:
+        print(ex.args[0])
+Expected:
+    matrix must be a matrix (list of lists) of integers/floats
+Got:
+    matrix must be a matrix (list of lists) of                 integers/floats
+Trying:
+    try:
+        matrix_divided([['7', '9']], 3)
+    except TypeError as ex:
+        print(ex.args[0])
+Expecting:
+    matrix must be a matrix (list of lists) of integers/floats
+**********************************************************************
+File "./tests/2-matrix_divided.txt", line 37, in 2-matrix_divided.txt
+Failed example:
+    try:
+        matrix_divided([['7', '9']], 3)
+    except TypeError as ex:
+        print(ex.args[0])
+Expected:
+    matrix must be a matrix (list of lists) of integers/floats
+Got:
+    matrix must be a matrix (list of lists) of                 integers/floats
+Trying:
+    try:
+        matrix_divided([[1, 4], [18, 9], 3], 3)
+    except TypeError as ex:
+        print(ex.args[0])
+Expecting:
+    matrix must be a matrix (list of lists) of integers/floats
+**********************************************************************
+File "./tests/2-matrix_divided.txt", line 42, in 2-matrix_divided.txt
+Failed example:
+    try:
+        matrix_divided([[1, 4], [18, 9], 3], 3)
+    except TypeError as ex:
+        print(ex.args[0])
+Expected:
+    matrix must be a matrix (list of lists) of integers/floats
+Got:
+    matrix must be a matrix (list of lists) of                 integers/floats
+Trying:
+    try:
+        matrix_divided([[7, 9, 12], [5], [1, 2, 3]], 3)
+    except TypeError as ex:
+        print(ex.args[0])
+Expecting:
+    Each row of the matrix must have the same size
+ok
+Trying:
+    try:
+        matrix_divided([[7, 9, 12], [1, 2, 3], [7, 13, 15, 18]], 3)
+    except TypeError as ex:
+        print(ex.args[0])
+Expecting:
+    Each row of the matrix must have the same size
+ok
+Trying:
+    try:
+        matrix_divided([[4]], '2')
+    except TypeError as ex:
+        print(ex.args[0])
+Expecting:
+    div must be a number
+ok
+Trying:
+    try:
+        matrix_divided([[4]], b'2')
+    except TypeError as ex:
+        print(ex.args[0])
+Expecting:
+    div must be a number
+ok
+Trying:
+    try:
+        matrix_divided([[4, 7]], 0)
+    except ZeroDivisionError as ex:
+        print(ex.args[0])
+Expecting:
+    division by zero
+ok
+Trying:
+    try:
+        matrix_divided([[4, 7]])
+    except Exception as ex:
+        print(ex.args[0])
+Expecting:
+    matrix_divided() missing 1 required positional argument: 'div'
+ok
+Trying:
+    try:
+        matrix_divided()
+    except Exception as ex:
+        print(ex.args[0])
+Expecting:
+    matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+ok
+**********************************************************************
+1 items had failures:
+   6 of  19 in 2-matrix_divided.txt
+19 tests in 1 items.
+13 passed and 6 failed.
+***Test Failed*** 6 failures.
