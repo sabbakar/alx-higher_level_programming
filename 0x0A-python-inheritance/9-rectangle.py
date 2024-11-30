@@ -1,21 +1,20 @@
 #!/usr/bin/python3
-"""
-A module for  a class Rectangle that inherits based on
-BaseGeometry (7-base_geometry.py). (task based on 8-rectangle.py)
-"""
-
-BaseGeometry = __import__("7-base_geometry").BaseGeometry
+'''A module for working with geometry.
+'''
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """
-
-    """
+    '''Represents a geometry object.
+    '''
     def __init__(self, width, height):
-        """
-        Instantiation with width and height
-        """
+        '''Initializes a new Rectangle geometry
+        object with the given width and height.
 
+        Args:
+            width (int): The width of the rectangle.
+            height (int): The height of the rectangle.
+        '''
         super().__init__()
         self.integer_validator('width', width)
         self.integer_validator('height', height)
